@@ -1,0 +1,9 @@
+title: stirstack
+filetype: png
+attributes:
+  - primary_key
+  - foreign_key
+  - content
+  - timestamps
+  - indirect
+orientation: vertical

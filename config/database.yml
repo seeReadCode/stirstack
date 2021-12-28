@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: stirstack_development
+
+test:
+  <<: *default
+  database: stirstack_test
+
+production:
+  <<: *default
+  database: stirstack_production
+  username: stirstack_production
+  password: <%= ENV['STIRSTACK_DATABASE_PASSWORD'] %>
