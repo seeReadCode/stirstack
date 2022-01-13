@@ -12,7 +12,7 @@
     "@tailwindcss/postcss7-compat": "^2.2.16",
     "autoprefixer": "^9.8.7",
     "heroicons-svelte": "^0.0.1",
-    "postcss": "^7.0.38",
+    "postcss": "^8.2.13",
     "svelte": "^3.43.0",
     "svelte-loader": "^3.1.2",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.16",
