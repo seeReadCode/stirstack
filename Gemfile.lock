@@ -288,7 +288,7 @@ GEM
     shellany (0.0.1)
     shoulda-matchers (5.0.0)
       activesupport (>= 5.2.0)
-    spring (3.1.1)
+    spring (4.0.0)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
