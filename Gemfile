@@ -26,7 +26,7 @@ end
 
 group :development do
   gem 'annotate'
-  gem 'brakeman', '~> 5.1'
+  gem 'brakeman', '~> 5.2'
   gem 'bundle-audit'
   gem 'guard', ' 2.18'
   gem 'guard-brakeman', ' 0.8.6'
