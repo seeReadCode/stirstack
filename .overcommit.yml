@@ -1,0 +1,38 @@
+gemfile: Gemfile
+
+verify_signatures: false
+
+PreCommit:
+  BundleAudit:
+    enabled: true
+    command: ['bundle', 'exec', 'bundle-audit', 'check', '--update']
+
+  EsLint:
+    enabled: true
+    command: ['npm', 'run', 'lint', '--', '-f', 'compact']
+    include: ['app/javascript/**/*.js', 'app/javascript/**/*.svelte']
+
+  RuboCop:
+    enabled: true
+    on_warn: fail
+    flags: []
+    command: ['bundle', 'exec', 'rubocop', '-c', './.rubocop.yml']
+    exclude:
+      - 'db/schema.rb'
+
+  Rustywind:
+    enabled: true
+    command: ['npm', 'run', 'rustywind-fix']
+
+  TrailingWhitespace:
+    enabled: true
+    exclude:
+      - 'vendor/**/*'
+
+PrePush:
+  Brakeman:
+    enabled: true
+
+  RSpec:
+    enabled: true
+
