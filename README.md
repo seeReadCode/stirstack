@@ -6,6 +6,11 @@ The STIR Stack consists of:
 - [InertiaJS](https://inertiajs.com/)
 - [Ruby on Rails](https://rubyonrails.org/)
 
+You may want to look particularly at:
+
+- [inertia-rails](https://github.com/inertiajs/inertia-rails)
+- [inertia-svelte](https://github.com/inertiajs/inertia/tree/master/packages/inertia-svelte)
+
 ## Features
 TBD
 
