@@ -1,3 +1,8 @@
+<script context="module">
+  import Layout from '../../Layouts/Main.svelte'
+
+  export const layout = Layout
+</script>
 <script>
   import { fade } from 'svelte/transition';
   import Button from '../../components/Button.svelte'

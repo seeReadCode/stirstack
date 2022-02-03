@@ -4,15 +4,16 @@ class ProjectsController < ApplicationController
       project: {
         title: ''
       }
-    }
+    }.merge(collect_projects)
     render inertia: 'Projects/Form', props: props
   end
 
   def edit
     project = Project.find(params[:id])
-    render inertia: 'Projects/Form', props: {
+    props = {
       project: project.as_json
-    }
+    }.merge(collect_projects)
+    render inertia: 'Projects/Form', props: props
   end
 
   def create
@@ -34,7 +35,22 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    props = {
+    props = collect_projects
+    render inertia: 'Projects/Index', props: props
+  end
+
+  def show
+    project = Project.find(params[:id])
+    render inertia: 'Projects/Show', props: {
+      project: project.as_json,
+      index_url: projects_path
+    }.merge(collect_projects)
+  end
+
+  private
+
+  def collect_projects
+    {
       projects: Project.all.order('updated_at desc').map do |project|
         project.as_json(
           only: %i[id title]
@@ -44,18 +60,7 @@ class ProjectsController < ApplicationController
       end,
       new_url: new_project_path
     }
-    render inertia: 'Projects/Index', props: props
   end
-
-  def show
-    project = Project.find(params[:id])
-    render inertia: 'Projects/Show', props: {
-      project: project.as_json,
-      index_url: projects_path
-    }
-  end
-
-  private
 
   def project_params
     params.require(:project).permit(:title)

@@ -1,3 +1,10 @@
+<script context="module">
+  // eslint-disable-next-line import/order
+  import Layout from '../../Layouts/Main.svelte'
+
+  export const layout = Layout;
+</script>
+
 <script>
   import { useForm } from '@inertiajs/inertia-svelte';
   import { fade } from 'svelte/transition';
