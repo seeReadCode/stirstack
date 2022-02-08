@@ -139,7 +139,7 @@ GEM
     guard-webpacker (0.2.1)
       guard (>= 2)
       guard-compat (~> 1.0)
-    i18n (1.8.11)
+    i18n (1.9.1)
       concurrent-ruby (~> 1.0)
     iniparse (1.5.0)
     listen (3.7.0)
