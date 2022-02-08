@@ -6,32 +6,43 @@ The STIR Stack consists of:
 - [InertiaJS](https://inertiajs.com/)
 - [Ruby on Rails](https://rubyonrails.org/)
 
-## Features
+No, it's not a silver bullet but...
+
+## Why this stack over X?
+tldr: performance and practices with lower cognitive overhead
+
+- React: so many people and resources not so much abstraction please and wow Svelte syntax, animations, accessibility
+- Non-MVC Arch: "wait, where is this in your codebase?" + YAGNI
+- API/Front-end: less requests, clearer control flow please
+- Semantic CSS: less artificial complexity, more readable code
+- Elixir Liveview: websockets are nice but more community
+- Laravel Livewire: less verbose syntax
+- Rails Hotwire/StimulusReflex: JSON rather than HTML over the wire and again wow Svelte
+
+## “Batteries included for...”
 - HTTP first, then XHR/JSON requests
-- MVC architecture
+- Security comes “for free” with built in CSRF.
+- Forms and validations “just work”
 - Encapsulated UI components
 - Utility first CSS
+- MVC architecture
 
-And a few more creature comforts for the devs...
+### ...Creature comforts for the devs...
 
 - Packaging and live reloading via webpacker
+- Annotatwed models and dynamically generated ERDs on migration
 - Pre commit and pre push hooks with testing, auditing, whitespace checks, CSS ordering, eslint, rubocop best practices
 - Real time checks on those things as well via guard
 
-## Some highlights
+### ...But wait there's more
 - Error bubbling for nested/child relations via `association_error_detail_concern.rb`
 - Client side form object 'shunting' so nested/child relations play nice with Rails controllers
 - Github Actions friendly Capybara for headless browser feature testing
 
-## Why we prefer our stack to X?
-tldr: performance and practices with lower cognitive overhead
 
-- React Components/Arch: not so much abstraction please and wow Svelte
-- API/Front-end: less requests, clearer control flow please
-- Semantic CSS: less artificial complexity, more readable code please
-- Elixir Liveview: websockets are nice but more community please
-- Laravel Livewire: less verbose syntax please
-- Rails Hotwire: JSON rather than HTML over the wire please
+## More info and background
+- [How I Learned to Stop Worrying & Love the STIR stack?](https://seereadcode.github.io/stirstack-deck/) presentation
+- [...as markdown](https://raw.githubusercontent.com/seeReadCode/stirstack-deck/master/PITCHME.md)
 
 
 ## Setup
@@ -40,7 +51,7 @@ Install brew if mac, asdf if you like, ruby/gems/bundler/guard/overcommit, node/
 
 ```sh
 bundle install
-overcommit --install
+bundle exec overcommit --install
 yarn install
 ```
 
@@ -71,18 +82,38 @@ bin/webpack-dev-server
 bin/rake
 ```
 
+## Creating a form
+Generally speaking, after you have a reasonable sense of what you want.
+
+1. If you are feeling virtuous, write a feature test for your functionality.
+1. Create your form in as a Svelte file `app/javascript/Pages` or thereabouts. [See Inertia docs for Svelte](https://inertiajs.com/forms).
+1. Style to your liking via [Tailwind 2](https://v2.tailwindcss.com/).
+1. Generate the model, migration, route, controller, factory and some test stuff for routes and model. Then run the migration
+```sh
+bin/rails g scaffold project title:string
+bin/rake db:migrate
+```
+1. Remove any unneccessary routes and related methods in your controller.  Add model validations and relations as needed, update tests. Tweak your controller to pass the correct info along as JSON via Inertia, [see Inertia docs](https://inertiajs.com/forms)
+1. Double check your tests, lint etc.
+1. And time.
+
+
 ## Deploy
-TBD
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/seeReadCode/stirstack/tree/main)
+
 
 ## Testing and Linting
+Before commit, you want to...
+
+- Lint your javascript and ruby
+- Analyzes your ruby via brakeman
+- Run your tests
+
 
 ```bash
 bundle exec rake
 bundle exec brakeman
-bundle exec rubocop -A
-yarn run eslint --fix app/javascript/*
+bundle exec rubocop -A # auto fix
+yarn run eslint --fix app/javascript/* # auto fix – nb. can be buggy!
 ```
-
-## Contributors
-- @seereadcode of <https://www.superbasic.xyz>
-- @jameswpierce of <https://www.superbasic.xyz>

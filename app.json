@@ -1,0 +1,30 @@
+{
+  name: "STIR Stack",
+  description: "",
+  keywords: ["svelte", "rails", "tailwind", "inertia"],
+  website: "https://github.com/seeReadCode/stirstack",
+  repository: "https://github.com/seeReadCode/stirstack",
+  success_url: "/",
+  stack: "heroku-20",
+  env: {
+    SECRET_KEY_BASE: {
+      description: "A secret key for verifying the integrity of signed cookies and JWTs.",
+      generator: "secret"
+    },
+    DEPLOY_TASKS: {
+      value: "db:migrate",
+      description: "Space-separated list of tasks to run after each deploy. You shouldn't need to change this."
+    }
+  },
+  formation: {
+    web: {
+      quantity: 1,
+      size: "free"
+    }
+  },
+  addons: [ "heroku-postgresql:hobby-dev" ],
+  buildpacks: [{
+      url: "heroku/ruby"
+    },
+  ]
+}
