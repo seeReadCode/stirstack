@@ -8,7 +8,7 @@ gem 'rails', '~> 6.1'
 gem 'bootsnap', '~> 1.9', require: false
 gem 'inertia_rails', git: 'https://github.com/inertiajs/inertia-rails'
 gem 'pg', '~> 1.2'
-gem 'puma', '~> 5.5'
+gem 'puma', '~> 5.6'
 gem 'sass-rails', '~> 6.0'
 gem 'webpacker', '~> 5.4'
 
