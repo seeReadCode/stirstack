@@ -333,41 +333,41 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  annotate
-  bootsnap (>= 1.4.4)
+  annotate (~> 3.1)
+  bootsnap (~> 1.9)
   brakeman (~> 5.2)
-  bundle-audit
-  byebug
-  capybara
-  factory_bot_rails
-  guard (= 2.18)
-  guard-brakeman (= 0.8.6)
-  guard-eslint
-  guard-rails
-  guard-rspec
-  guard-rubocop (= 1.5)
-  guard-webpacker
+  bundle-audit (~> 0.1)
+  byebug (~> 11.1)
+  capybara (~> 3.36)
+  factory_bot_rails (~> 6.2)
+  guard (~> 2.18)
+  guard-brakeman (~> 0.8)
+  guard-eslint (~> 1.1)
+  guard-rails (~> 0.8)
+  guard-rspec (~> 4.7)
+  guard-rubocop (~> 1.5)
+  guard-webpacker (~> 0.2)
   inertia_rails!
-  listen (~> 3.3)
-  overcommit
-  pg
-  puma
-  rack-mini-profiler (~> 2.0)
-  rails (= 6.1.4.4)
+  listen (~> 3.7)
+  overcommit (~> 0.58)
+  pg (~> 1.2)
+  puma (~> 5.5)
+  rack-mini-profiler (~> 2.3)
+  rails (~> 6.1)
   rails-erd (~> 1.6)
   rspec-rails (~> 5.0)
-  rubocop (= 1.22)
-  rubocop-performance
-  rubocop-rails
-  rubocop-rake
-  rubocop-rspec
-  rubocop-thread_safety
-  sass-rails
-  shoulda-matchers
-  spring
-  web-console (>= 4.1.0)
-  webdrivers (~> 4.0)
-  webpacker
+  rubocop (~> 1.22)
+  rubocop-performance (~> 1.13)
+  rubocop-rails (~> 2.12)
+  rubocop-rake (~> 0.6)
+  rubocop-rspec (~> 2.6)
+  rubocop-thread_safety (~> 0.4)
+  sass-rails (~> 6.0)
+  shoulda-matchers (~> 5.0)
+  spring (~> 4.0)
+  web-console (~> 4.2)
+  webdrivers (~> 4.7)
+  webpacker (~> 5.4)
 
 RUBY VERSION
    ruby 3.0.0p0
