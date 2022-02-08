@@ -43,7 +43,7 @@ group :development do
   gem 'rubocop-performance', '~> 1.13'
   gem 'rubocop-rails', '~> 2.12'
   gem 'rubocop-rake', '~> 0.6'
-  gem 'rubocop-rspec', '~> 2.6'
+  gem 'rubocop-rspec', '~> 2.8'
   gem 'rubocop-thread_safety', '~> 0.4'
   gem 'spring', '~> 4.0'
   gem 'web-console', '~> 4.2'
