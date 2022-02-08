@@ -7,15 +7,15 @@ The STIR Stack consists of:
 - [Ruby on Rails](https://rubyonrails.org/)
 
 ## Features
-- HTTP first, then XHR requests
+- HTTP first, then XHR/JSON requests
 - MVC architecture
 - Encapsulated UI components
 - Utility first CSS
 
-And for the developer...
+And a few more creature comforts for the devs...
 
 - Packaging and live reloading via webpacker
-- Pre commit hooks with testing, auditing, whitespace checks, CSS ordering, eslint, rubocop best practices
+- Pre commit and pre push hooks with testing, auditing, whitespace checks, CSS ordering, eslint, rubocop best practices
 - Real time checks on those things as well via guard
 
 ## Some highlights
@@ -30,16 +30,17 @@ tldr: performance and practices with lower cognitive overhead
 - API/Front-end: less requests, clearer control flow please
 - Semantic CSS: less artificial complexity, more readable code please
 - Elixir Liveview: websockets are nice but more community please
-- Laravel Livewire: less concise please
+- Laravel Livewire: less verbose syntax please
 - Rails Hotwire: JSON rather than HTML over the wire please
 
 
 ## Setup
 
-Install brew if mac, asdf if you like, ruby/gems/bundler/guard, node/yarn. I recommend asdf for mananging ruby and node.
+Install brew if mac, asdf if you like, ruby/gems/bundler/guard/overcommit, node/yarn. I recommend asdf for mananging ruby and node.
 
 ```sh
 bundle install
+overcommit --install
 yarn install
 ```
 
