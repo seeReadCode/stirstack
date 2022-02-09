@@ -48,3 +48,5 @@ group :development do
   gem 'spring', '~> 4.0'
   gem 'web-console', '~> 4.2'
 end
+
+gem 'tzinfo-data', '~> 1.2021'

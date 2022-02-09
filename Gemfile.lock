@@ -155,10 +155,14 @@ GEM
     matrix (0.4.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
+    mini_portile2 (2.6.1)
     minitest (5.15.0)
     msgpack (1.4.2)
     nenv (0.3.0)
     nio4r (2.5.8)
+    nokogiri (1.12.5)
+      mini_portile2 (~> 2.6.1)
+      racc (~> 1.4)
     nokogiri (1.12.5-arm64-darwin)
       racc (~> 1.4)
     nokogiri (1.12.5-x86_64-linux)
@@ -305,6 +309,8 @@ GEM
     tilt (2.0.10)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
+    tzinfo-data (1.2021.5)
+      tzinfo (>= 1.0.0)
     unicode-display_width (2.1.0)
     web-console (4.2.0)
       actionview (>= 6.0.0)
@@ -328,6 +334,7 @@ GEM
     zeitwerk (2.5.2)
 
 PLATFORMS
+  aarch64-linux
   arm64-darwin-20
   arm64-darwin-21
   x86_64-linux
@@ -365,6 +372,7 @@ DEPENDENCIES
   sass-rails (~> 6.0)
   shoulda-matchers (~> 5.0)
   spring (~> 4.0)
+  tzinfo-data (~> 1.2021)
   web-console (~> 4.2)
   webdrivers (~> 4.7)
   webpacker (~> 5.4)
