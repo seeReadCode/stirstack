@@ -117,3 +117,13 @@ bundle exec brakeman
 bundle exec rubocop -A # auto fix
 yarn run eslint --fix app/javascript/* # auto fix – nb. can be buggy!
 ```
+
+## Docker usage
+
+```sh
+docker-compose build
+docker-compose run web rake db:create
+docker-compose run web rake db:migrate
+docker-compose up
+docker-compose down
+```

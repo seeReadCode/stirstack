@@ -6,6 +6,9 @@ default: &default
 development:
   <<: *default
   database: stirstack_development
+  host: db
+  username: postgres
+  password: password
 
 test:
   <<: *default

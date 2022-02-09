@@ -1,0 +1,30 @@
+version: '3.2'
+
+services:
+  db:
+    image: postgres:13
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    expose:
+      - 5432
+
+  web:
+    build: .
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/usr/src/app
+    depends_on:
+      - webpack
+      - db
+
+  webpack:
+    build: .
+    command: ./bin/webpack-dev-server --host 0.0.0.0 --hot --inline
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - '3035:3035'

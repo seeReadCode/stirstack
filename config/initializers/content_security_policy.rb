@@ -1,3 +1,7 @@
+Rails.application.config.content_security_policy do |policy|
+  policy.connect_src :self, :https, 'http://webpack:3035', 'ws://webpack:3035' if Rails.env.development?
+end
+
 # Be sure to restart your server when you modify this file.
 
 # Define an application-wide content security policy
