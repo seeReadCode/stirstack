@@ -3,7 +3,7 @@ git_source(:github) { |_repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.0'
 
-gem 'rails', '~> 6.1'
+gem 'rails', '~> 7.0'
 
 gem 'bootsnap', '~> 1.9', require: false
 gem 'inertia_rails', git: 'https://github.com/inertiajs/inertia-rails'
@@ -26,7 +26,7 @@ group :test do
 end
 
 group :development do
-  gem 'annotate', '~> 3.1'
+  gem 'annotate', '~> 3.2'
   gem 'brakeman', '~> 5.2'
   gem 'bundle-audit', '~> 0.1'
   gem 'guard', '~> 2.18'
