@@ -144,9 +144,6 @@ GEM
     guard-rubocop (1.5.0)
       guard (~> 2.0)
       rubocop (< 2.0)
-    guard-webpacker (0.2.1)
-      guard (>= 2)
-      guard-compat (~> 1.0)
     i18n (1.9.1)
       concurrent-ruby (~> 1.0)
     iniparse (1.5.0)
@@ -313,7 +310,6 @@ GEM
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2)
-    semantic_range (3.0.0)
     shellany (0.0.1)
     shoulda-matchers (5.0.0)
       activesupport (>= 5.2.0)
@@ -348,11 +344,6 @@ GEM
       nokogiri (~> 1.6)
       rubyzip (>= 1.3.0)
       selenium-webdriver (> 3.141, < 5.0)
-    webpacker (5.4.3)
-      activesupport (>= 5.2)
-      rack-proxy (>= 0.6.1)
-      railties (>= 5.2)
-      semantic_range (>= 2.3.0)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -379,7 +370,6 @@ DEPENDENCIES
   guard-rails (~> 0.8)
   guard-rspec (~> 4.7)
   guard-rubocop (~> 1.5)
-  guard-webpacker (~> 0.2)
   inertia_rails!
   listen (~> 3.7)
   overcommit (~> 0.58)
@@ -401,7 +391,6 @@ DEPENDENCIES
   vite_rails (~> 3.0)
   web-console (~> 4.2)
   webdrivers (~> 4.7)
-  webpacker (~> 5.4)
 
 RUBY VERSION
    ruby 3.0.0p0

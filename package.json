@@ -11,9 +11,7 @@
     "autoprefixer": "^9.8.7",
     "heroicons-svelte": "^0.0.1",
     "svelte": "^3.43.0",
-    "svelte-loader": "^3.1.2",
-    "webpack": "^4.46.0",
-    "webpack-cli": "^3.3.12"
+    "svelte-loader": "^3.1.2"
   },
   "version": "0.1.0",
   "devDependencies": {
@@ -27,8 +25,7 @@
     "tailwindcss": "^3.0.22",
     "vite": "^2.7.7",
     "vite-plugin-ruby": "^3.0.5",
-    "vite-plugin-windicss": "^1.7.0",
-    "webpack-dev-server": "^3"
+    "vite-plugin-windicss": "^1.7.0"
   },
   "scripts": {
     "lint": "eslint app/frontend/**/*.js app/frontend/**/*.svelte",
