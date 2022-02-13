@@ -45,11 +45,6 @@ guard :rspec, cmd: 'bundle exec rspec' do
   end
 end
 
-guard :webpacker do
-  watch('config/webpacker.yml')
-  watch(%r{^config/webpacker/(.+)$})
-end
-
 guard 'rails' do
   watch('Gemfile.lock')
   watch(%r{^(config|lib)/.*})
