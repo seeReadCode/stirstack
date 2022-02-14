@@ -66,10 +66,12 @@ bin/rake db:create
 Start your database, install gems and node packages if they have been updated, run any migrations, and then run...
 
 ```sh
+# run vite
+bin/vite dev
+
+# and guard
 bundle exec guard
 
-# and run live reload js
-bin/vite dev
 
 ```
 
