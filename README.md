@@ -105,6 +105,7 @@ bin/rake db:migrate
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/seeReadCode/stirstack/tree/main)
 
+Setup your build packs like and make sure your buildpacks are in the right order [as per the Vite Ruby docs](https://vite-ruby.netlify.app/guide/deployment.html#using-heroku).
 
 ## Testing and Linting
 Before commit, you want to...

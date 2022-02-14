@@ -7,6 +7,14 @@
   "success_url": "/",
   "stack": "heroku-20",
   "env": {
+    "NPM_CONFIG_PRODUCTION": {
+      "description": "As per vite-ruby",
+      "value": "false"
+    },
+    "YARN_PRODUCTION": {
+      "description": "As per vite-ruby",
+      "value": "false"
+    },
     "SECRET_KEY_BASE": {
       "description": "A secret key for verifying the integrity of signed cookies and JWTs.",
       "generator": "secret"
@@ -23,8 +31,13 @@
     }
   },
   "addons": [ "heroku-postgresql:hobby-dev" ],
-  "buildpacks": [{
+  "buildpacks": [
+      {
+      "url": "heroku/nodejs"
+      }
+      ,
+      {
       "url": "heroku/ruby"
-    }
+      }
   ]
 }
