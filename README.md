@@ -29,7 +29,7 @@ tldr: performance and practices with lower cognitive overhead
 
 ### ...Creature comforts for the devs...
 
-- Packaging and live reloading via webpacker
+- Packaging and live reloading via vite
 - Annotatwed models and dynamically generated ERDs on migration
 - Pre commit and pre push hooks with testing, auditing, whitespace checks, CSS ordering, eslint, rubocop best practices
 - Real time checks on those things as well via guard
@@ -63,20 +63,23 @@ bin/rake db:create
 
 ## Development
 
-Start your database, install gems and node packages if they have been updated, run any migrations, and then run guard
+Start your database, install gems and node packages if they have been updated, run any migrations, and then run...
 
 ```sh
+# run vite
+bin/vite dev
+
+# and guard
 bundle exec guard
+
+
 ```
 
-or
+or instead of `guard`...
 
 ```sh
 # run server
 bin/rails s
-
-# run live reload js
-bin/webpack-dev-server
 
 # test
 bin/rake
@@ -86,8 +89,8 @@ bin/rake
 Generally speaking, after you have a reasonable sense of what you want.
 
 1. If you are feeling virtuous, write a feature test for your functionality.
-1. Create your form in as a Svelte file `app/javascript/Pages` or thereabouts. [See Inertia docs for Svelte](https://inertiajs.com/forms).
-1. Style to your liking via [Tailwind 2](https://v2.tailwindcss.com/).
+1. Create your form in as a Svelte file `app/frontend/Pages` or thereabouts. [See Inertia docs for Svelte](https://inertiajs.com/forms).
+1. Style to your liking via [Tailwind](https://www.tailwindcss.com/).
 1. Generate the model, migration, route, controller, factory and some test stuff for routes and model. Then run the migration
 ```sh
 bin/rails g scaffold project title:string
@@ -115,5 +118,5 @@ Before commit, you want to...
 bundle exec rake
 bundle exec brakeman
 bundle exec rubocop -A # auto fix
-yarn run eslint --fix app/javascript/* # auto fix – nb. can be buggy!
+yarn run eslint --fix app/frontend/* # auto fix – nb. can be buggy!
 ```

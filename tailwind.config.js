@@ -1,6 +1,6 @@
 module.exports = {
-  purge: [
-    "./app/javascript/**/*.svelte",
+  content: [
+    "./app/frontend/**/*.svelte",
     "./app/**/*.html.erb",
   ],
   darkMode: false, // or 'media' or 'class'

@@ -10,7 +10,6 @@ gem 'inertia_rails', git: 'https://github.com/inertiajs/inertia-rails'
 gem 'pg', '~> 1.2'
 gem 'puma', '~> 5.5'
 gem 'sass-rails', '~> 6.0'
-gem 'webpacker', '~> 5.4'
 
 group :development, :test do
   gem 'byebug', '~> 11.1', platforms: %i[mri mingw x64_mingw]
@@ -35,7 +34,6 @@ group :development do
   gem 'guard-rails', '~> 0.8', require: false
   gem 'guard-rspec', '~> 4.7', require: false
   gem 'guard-rubocop', '~> 1.5'
-  gem 'guard-webpacker', '~> 0.2'
   gem 'listen', '~> 3.7'
   gem 'rack-mini-profiler', '~> 2.3'
   gem 'rails-erd', '~> 1.6'
@@ -48,3 +46,5 @@ group :development do
   gem 'spring', '~> 4.0'
   gem 'web-console', '~> 4.2'
 end
+
+gem 'vite_rails', '~> 3.0'

@@ -35,7 +35,7 @@ guard :rspec, cmd: 'bundle exec rspec' do
   # Capybara features specs
   watch(rails.view_dirs) { |m| rspec.spec.call("features/#{m[1]}") }
   # TODO: match pages to features
-  watch(%r{^app/javascript/Pages(.+)\.svelte$}) { |_m| rspec.spec.call('features/*') }
+  watch(%r{^app/frontend/Pages(.+)\.svelte$}) { |_m| rspec.spec.call('features/*') }
   watch(rails.layouts) { |m| rspec.spec.call("features/#{m[1]}") }
 
   # Turnip features and steps
@@ -43,11 +43,6 @@ guard :rspec, cmd: 'bundle exec rspec' do
   watch(%r{^spec/acceptance/steps/(.+)_steps\.rb$}) do |m|
     Dir[File.join("**/#{m[1]}.feature")][0] || 'spec/acceptance'
   end
-end
-
-guard :webpacker do
-  watch('config/webpacker.yml')
-  watch(%r{^config/webpacker/(.+)$})
 end
 
 guard 'rails' do
@@ -63,10 +58,10 @@ guard :brakeman, quiet: true, run_on_start: true do
 end
 
 guard :eslint,
-      default_paths: ['app/javascript/*.js', 'app/javascript/*.svelte'],
+      default_paths: ['app/frontend/*.js', 'app/frontend/*.svelte'],
       formatter: 'codeframe' do
-  watch(%r{^app/javascript/.+\.(js|es6|svelte)$})
-  watch(%r{^spec/javascript/.+\.(js|es6)$})
+  watch(%r{^app/frontend/.+\.(js|es6|svelte)$})
+  watch(%r{^spec/frontend/.+\.(js|es6)$})
 end
 
 guard :rubocop do

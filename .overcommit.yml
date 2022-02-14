@@ -10,7 +10,7 @@ PreCommit:
   EsLint:
     enabled: true
     command: ['npm', 'run', 'lint', '--', '-f', 'compact']
-    include: ['app/javascript/**/*.js', 'app/javascript/**/*.svelte']
+    include: ['app/frontend/**/*.js', 'app/frontend/**/*.svelte']
 
   RuboCop:
     enabled: true

@@ -8,30 +8,28 @@
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
-    "@rails/webpacker": "5.4.3",
-    "@tailwindcss/postcss7-compat": "^2.2.16",
     "autoprefixer": "^9.8.7",
+    "axios": "^0.25.0",
     "heroicons-svelte": "^0.0.1",
-    "postcss": "^7.0.38",
     "svelte": "^3.43.0",
-    "svelte-loader": "^3.1.2",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.16",
-    "webpack": "^4.46.0",
-    "webpack-cli": "^3.3.12"
+    "svelte-loader": "^3.1.2"
   },
   "version": "0.1.0",
   "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.37",
     "eslint": "^7.2.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-svelte3": "^3.2.1",
+    "postcss": "^8.4.6",
     "rustywind": "^0.12.2",
-    "webpack-dev-server": "^3"
+    "tailwindcss": "^3.0.22",
+    "vite": "^2.7.7",
+    "vite-plugin-ruby": "^3.0.5"
   },
   "scripts": {
-    "lint": "eslint app/javascript/**/*.js app/javascript/**/*.svelte",
-    "lint:fix": "eslint --fix app/javascript/**/*.js app/javascript/**/*.svelte",
+    "lint": "eslint app/frontend/**/*.js app/frontend/**/*.svelte",
+    "lint:fix": "eslint --fix app/frontend/**/*.js app/frontend/**/*.svelte",
     "rustywind-fix": "rustywind --write app/"
-
   }
 }

@@ -32,7 +32,7 @@ jobs:
       - name: Install node modules
         run: yarn
       - name: Run ESLint
-        run: yarn run eslint app/javascript/*
+        run: yarn run eslint app/frontend/*
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
       - uses: actions/cache@v2.1.6
@@ -56,5 +56,5 @@ jobs:
           bundle exec bundle-audit --update
           bundle exec brakeman -q
           bundle exec rake db:create
-          bundle exec rails webpacker:compile
+          yarn run vite build
           bundle exec rake
