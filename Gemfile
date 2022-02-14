@@ -37,7 +37,7 @@ group :development do
   gem 'listen', '~> 3.7'
   gem 'rack-mini-profiler', '~> 2.3'
   gem 'rails-erd', '~> 1.6'
-  gem 'rubocop', '~> 1.22'
+  gem 'rubocop', '~> 1.25'
   gem 'rubocop-performance', '~> 1.13'
   gem 'rubocop-rails', '~> 2.12'
   gem 'rubocop-rake', '~> 0.6'
