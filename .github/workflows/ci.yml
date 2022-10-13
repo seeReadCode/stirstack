@@ -25,7 +25,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2.4.0
-      - uses: actions/cache@v2
+      - uses: actions/cache@v3.0.11
         with:
           path: '**/node_modules'
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
@@ -35,7 +35,7 @@ jobs:
         run: yarn run eslint app/frontend/*
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
-      - uses: actions/cache@v2.1.6
+      - uses: actions/cache@v3.0.11
         with:
           path: vendor/bundle
           key: ${{ runner.os }}-gems-v2-${{ hashFiles('**/Gemfile.lock') }}
