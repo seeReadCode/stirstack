@@ -35,12 +35,10 @@ jobs:
         run: yarn run eslint app/frontend/*
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
-      - uses: actions/cache@v2.1.6
+      - uses: actions/cache/restore@v4
         with:
           path: vendor/bundle
           key: ${{ runner.os }}-gems-v2-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-v2-
       - name: Build and run tests
         env:
           DATABASE_URL: postgres://postgres:postgres@localhost:5432/test
@@ -58,3 +56,8 @@ jobs:
           bundle exec rake db:create
           yarn run vite build
           bundle exec rake
+      - uses: actions/cache/save@v4
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-v2-${{ hashFiles('**/Gemfile.lock') }}
+
