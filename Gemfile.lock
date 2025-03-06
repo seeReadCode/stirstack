@@ -373,7 +373,7 @@ DEPENDENCIES
   inertia_rails!
   listen (~> 3.7)
   overcommit (~> 0.58)
-  pg (~> 1.2)
+  pg (~> 1.3)
   puma (~> 5.5)
   rack-mini-profiler (~> 2.3)
   rails (~> 7.0)
