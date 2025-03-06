@@ -3,7 +3,7 @@ git_source(:github) { |_repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.0'
 
-gem 'rails', '~> 7.0'
+gem 'rails', '~> 7.0.8.5'
 
 gem 'bootsnap', '~> 1.9', require: false
 gem 'inertia_rails', git: 'https://github.com/inertiajs/inertia-rails'
