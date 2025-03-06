@@ -3,12 +3,12 @@ git_source(:github) { |_repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.0'
 
-gem 'rails', '~> 7.0.8.5'
-gem 'concurrent-ruby', '< 1.3.4' #https://stackoverflow.com/questions/79360526/uninitialized-constant-activesupportloggerthreadsafelevellogger-nameerror
 gem 'bootsnap', '~> 1.9', require: false
+gem 'concurrent-ruby', '< 1.3.4' # https://stackoverflow.com/questions/79360526/uninitialized-constant-activesupportloggerthreadsafelevellogger-nameerror
 gem 'inertia_rails', git: 'https://github.com/inertiajs/inertia-rails'
 gem 'pg', '~> 1.3'
 gem 'puma', '~> 5.5'
+gem 'rails', '~> 7.0.8.5'
 gem 'sass-rails', '~> 6.0'
 
 group :development, :test do
