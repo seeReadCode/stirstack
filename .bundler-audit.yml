@@ -1,0 +1,4 @@
+---
+ignore:
+  - GHSA-vvfq-8hwr-qm4m  # TODO nokogiri bump needs new sass
+
