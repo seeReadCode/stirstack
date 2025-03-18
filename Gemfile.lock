@@ -81,8 +81,8 @@ GEM
     ast (2.4.2)
     base64 (0.2.0)
     bindex (0.8.1)
-    bootsnap (1.9.4)
-      msgpack (~> 1.0)
+    bootsnap (1.18.4)
+      msgpack (~> 1.2)
     brakeman (5.2.0)
     builder (3.3.0)
     bundle-audit (0.1.0)
@@ -165,7 +165,7 @@ GEM
     method_source (1.1.0)
     mini_mime (1.1.5)
     minitest (5.25.4)
-    msgpack (1.4.2)
+    msgpack (1.8.0)
     nenv (0.3.0)
     net-imap (0.4.19)
       date
@@ -353,11 +353,12 @@ GEM
 PLATFORMS
   arm64-darwin-20
   arm64-darwin-21
+  arm64-darwin-24
   x86_64-linux
 
 DEPENDENCIES
   annotate (~> 3.2)
-  bootsnap (~> 1.9)
+  bootsnap (~> 1.18.4)
   brakeman (~> 5.2)
   bundle-audit (~> 0.1)
   byebug (~> 11.1)
@@ -393,7 +394,7 @@ DEPENDENCIES
   webdrivers (~> 4.7)
 
 RUBY VERSION
-   ruby 3.0.0p0
+   ruby 3.3.0p0
 
 BUNDLED WITH
    2.2.3
